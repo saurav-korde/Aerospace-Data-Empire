@@ -1,0 +1,31 @@
+# ==========================================
+# Aerospace Data Empire - Git Ignore Rules
+# ==========================================
+
+# 1. OS Generated Files (macOS/Windows)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 2. VS Code & SQLTools Artifacts
+.vscode/
+*.session.sql
+*.history
+
+# 3. Raw Data & Extracts (CRITICAL)
+# We NEVER push raw flat files or massive datasets to GitHub.
+# We only version-control the SQL logic that processes them.
+Raw_Data/
+*.txt
+*.csv
+*.json
+*.xlsx
+*.pdf
+
+# 4. Power BI Temp Files
+# (Ignores auto-recovery files, but keeps your main .pbix)
+*~*.pbix
